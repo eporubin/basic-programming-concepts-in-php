@@ -57,7 +57,7 @@ There are Four simple scalar types:
 * string
   * Can be in single quotes e.g. 'hello world'
   * Can be in double quotes e.g. "hello world"
-  
+
 
 Three compound data types
 * array, object, callable (more on these later)
@@ -98,7 +98,7 @@ echo '<p>Hi, my name is '.$name.'. I work as a '.$job; //<p>Hi, my name is Bob .
 
 For more info see:
 * http://php.net/manual/en/language.types.string.php
-* https://stackoverflow.com/questions/3446216/what-is-the-difference-between-single-quoted-and-double-quoted-strings-in-php 
+* https://stackoverflow.com/questions/3446216/what-is-the-difference-between-single-quoted-and-double-quoted-strings-in-php
 
 
 ## Conditional statements
@@ -148,6 +148,31 @@ if($score>=70){
 }
 ?>
 ```
+### Testing Boolean values
+Often we want to test if something is *true* or *false* e.g.
+
+```php
+$raining = true;
+if($raining === true){
+  echo "Take your umbrella";
+}
+```
+Programmers often don't bother with the operator (===), instead they will write
+
+```php
+$raining = true;
+if($raining){
+  echo "Take your umbrella";
+}
+```
+or if we wanted to test if something is *false*
+```php
+$raining = true;
+if(!$raining){
+  echo "Nice and sunny";
+}
+```
+You need to be familiar with this shorthand way of testing Boolean values.
 
 ### Logical Operators
 | Operator   |       Name       |       
@@ -247,4 +272,4 @@ if($logged_in===false){
 
 ## More info
 * http://php.net/
-* Have a look on Summon for an intro to PHP book. 
+* Have a look on Summon for an intro to PHP book.
