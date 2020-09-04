@@ -27,7 +27,7 @@ This example simply prints the text *Welcome to PHP*. Here are some key points.
 * All PHP statements must end with a semi-colon ( ; ) !
 
 ### How can I view my PHP web page
-* Upload to web server
+* Make sure the page is on a web server.
 * View the page in a browser. You must request the page via the server i.e. the URL must begin with *http*.
 
 ## Variables and data types
@@ -39,13 +39,14 @@ echo $myVar; //outputs Hello World
 ?>
 ```
 PHP is a dynamically typed language.
-* We don’t need to specify the type of data a variable contains
+* We don't need to specify the type of data a variable contains
 * We can change the type of data stored in a variable e.g.
 ```php
 <?php
 $myVar = 9;  //number
-$myVar = "Hiya"; //string
 $myVar = true;  //boolean
+$myVar = "Hiya"; //string
+echo $myVar; // "Hiya"
 ?>
 ```
 
@@ -102,7 +103,7 @@ For more info see:
 
 
 ## Conditional statements
-Again, testing data in PHP works like many other programming languages e.g. a web site that is only for people aged 65 and over:
+Again, testing data in PHP works like many other programming languages e.g. a website that is only for people aged 65 and over:
 
 ```php
 <?php
@@ -148,31 +149,6 @@ if($score>=70){
 }
 ?>
 ```
-### Testing Boolean values
-Often we want to test if something is *true* or *false* e.g.
-
-```php
-$raining = true;
-if($raining === true){
-  echo "Take your umbrella";
-}
-```
-Programmers often don't bother with the operator (===), instead they will write
-
-```php
-$raining = true;
-if($raining){
-  echo "Take your umbrella";
-}
-```
-or if we wanted to test if something is *false*
-```php
-$raining = true;
-if(!$raining){
-  echo "Nice and sunny";
-}
-```
-You need to be familiar with this shorthand way of testing Boolean values.
 
 ### Logical Operators
 | Operator   |       Name       |       
@@ -196,7 +172,7 @@ if($score>=60 && $score<70){
 <?php
 //if $uName has a value of Bill or Bob the message is displayed
 $uName="Ben";
-if($uName=="Bill" || $uName=="Bob"){
+if($uName === "Bill" || $uName === "Bob"){
     echo "Welcome {$uName}";
 }
 ?>
