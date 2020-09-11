@@ -2,9 +2,9 @@ FROM gitpod/workspace-mysql
 
 USER root
 
-COPY apache/apache.conf /etc/apache2/apache2.conf
+# COPY apache/apache.conf /etc/apache2/apache2.conf
 
-COPY php/php2.ini /etc/php/7.4/apache2/conf.d/php2.ini
+COPY config/php2.ini /etc/php/7.4/apache2/conf.d/php2.ini
 
 
 # Change document root folder
