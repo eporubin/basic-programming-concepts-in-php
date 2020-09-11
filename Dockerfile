@@ -2,7 +2,7 @@ FROM gitpod/workspace-mysql
 
 USER root
 
-# COPY apache/apache.conf /etc/apache2/apache2.conf
+COPY config/apache.conf /etc/apache2/apache2.conf
 
 COPY config/php2.ini /etc/php/7.4/apache2/conf.d/php2.ini
 
