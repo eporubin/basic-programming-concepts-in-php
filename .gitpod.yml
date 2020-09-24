@@ -1,9 +1,0 @@
-image:
-  file: Dockerfile
-ports:
- - port: 8080
-   onOpen: open-preview
-tasks:
- - name: Apache
-   command: >
-    apachectl start;
